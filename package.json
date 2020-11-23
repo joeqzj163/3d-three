@@ -1,0 +1,52 @@
+{
+  "name": "3d-three",
+  "version": "1.0.0",
+  "description": "A 3D visual JavaScript Library Based on three.js",
+  "main": "rollup.config.js",
+  "scripts": {
+    "dev": "rollup -w -c ./build/rollup.config.js",
+    "dev:3d": "rollup -w -c ./build/rollup.config.js",
+    "dev:3d2": "rollup -w -c ./build/rollup.config.dev.js",
+    "dev:vue": "aa",
+    "build:amd": "rollup index.js -f amd -o ./dist/dist.amd.js",
+    "build:cjs": "rollup index.js -f cjs -o ./dist/dist.cjs.js",
+    "build:es": "rollup index.js -f es -o ./dist/dist.es.js",
+    "build:iife": "rollup index.js -f iife -n result -o ./dist/dist.iife.js",
+    "build:umd": "rollup index.js -f umd -n result -o ./dist/dist.umd.js",
+    "build:all": "npm run build:amd && npm run build:cjs && npm run build:es && npm run build:iife && npm run build:umd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeqzj163/3d-three.git"
+  },
+  "keywords": [
+    "3d"
+  ],
+  "author": "joe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeqzj163/3d-three/issues"
+  },
+  "homepage": "https://github.com/joeqzj163/3d-three#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^6.8.0",
+    "rollup": "^1.31.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "dependencies": {
+    "events": "^3.1.0",
+    "three": "^0.113.2"
+  }
+}
